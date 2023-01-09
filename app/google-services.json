@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "404461276674",
+    "project_id": "fovappy",
+    "storage_bucket": "fovappy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404461276674:android:ba47381170c3aff68de11b",
+        "android_client_info": {
+          "package_name": "uas.if51.fovappy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404461276674-4o3svki34fm3bd054pvd0kg86784ik1n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDACxZw9pobn3vGK95T3gGW_23uCGUW07E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404461276674-4o3svki34fm3bd054pvd0kg86784ik1n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
