@@ -16,7 +16,7 @@
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/logo"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="32dp"/>
 
@@ -52,21 +52,16 @@
             android:id="@+id/btn_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_500"
+            android:backgroundTint="#FB0B0B"
             android:textColor="@android:color/white"
             android:text="Sign In"
             android:layout_marginTop="16dp"/>
 
-        <Button
-            android:id="@+id/btn_signup"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:text="Not a member? Get registered in Chat Together now!"
-            android:textAllCaps="false"
-            android:layout_gravity="center_horizontal"/>
 
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <Button
             android:id="@+id/btn_resetpassword"
             style="@style/Widget.MaterialComponents.Button.TextButton"
@@ -75,9 +70,26 @@
             android:background="@null"
             android:text="Forgot your password?"
             android:textAllCaps="false"
-            android:layout_gravity="center_horizontal"/>
+            android:textColor="#FB0B0B"
+            app:layout_constraintBottom_toTopOf="@id/btn_signup"
+            app:layout_constraintEnd_toEndOf="@id/btn_signup"/>
+        <Button
+            android:id="@+id/btn_signup"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textColor="#FB0B0B"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="24dp"
+            android:text="Register here!"
+            android:textAllCaps="false"/>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     <ProgressBar
         android:id="@+id/progressBar"
