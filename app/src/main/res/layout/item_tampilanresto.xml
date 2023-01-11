@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
-        android:id="@+id/tv_namamakanan"
+        android:id="@+id/tv_namaresto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -68,6 +68,6 @@
         android:layout_marginStart="16dp"
         android:text="Indonesisa"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_namamakanan"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_namaresto"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

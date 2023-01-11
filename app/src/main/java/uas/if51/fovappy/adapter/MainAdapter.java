@@ -41,7 +41,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.HolderData>{
         holder.tvId_makanan.setText(String.valueOf(dm.getId_makanan()));
         holder.tvNama_Makanan.setText(dm.getNama_makanan());
         holder.tvDeskripsi.setText(dm.getDeskripsi());
-        holder.tvHarga.setText(dm.getHarga());
+        holder.tvHarga.setText(String.valueOf(dm.getHarga()));
     }
 
 

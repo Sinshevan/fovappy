@@ -103,6 +103,7 @@
 
 
             <TextView
+                android:id="@+id/tv_resto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Restaurants Near You"
@@ -111,11 +112,14 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
 
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_data"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:listitem="@layout/item_restaurantnear"/>
+
+
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

@@ -64,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        binding.tvResto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RestaurantActivity.class);
+                startActivity(intent);
+            }
+        });
+
         binding.btnCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
                 listRestaurant = response.body().getData();
 
-                adData = new AdapterMain(MainActivity.this, listRestaurant);
+                adData = new AdapterData(MainActivity.this, listRestaurant);
                 rvData.setAdapter(adData);
                 adData.notifyDataSetChanged();
             }

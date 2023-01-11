@@ -35,6 +35,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import uas.if51.fovappy.R;
 import uas.if51.fovappy.adapter.AdapterData;
+import uas.if51.fovappy.adapter.AdapterMain;
 import uas.if51.fovappy.adapter.MainAdapter;
 import uas.if51.fovappy.api.APIRequestData;
 import uas.if51.fovappy.api.RetroServer;
@@ -48,20 +49,32 @@ public class CategoryActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager lmData;
     private List<DataModel> listRestaurant = new ArrayList<>();
     private EditText etSearch;
-    private ImageView btnSearch;
+    private TextView tvResto;
+    private ImageView btnSearch, ivBack;
     private DataModel dataModel;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
+        ivBack = findViewById(R.id.iv_back);
+        tvResto = findViewById(R.id.tv_resto);
         etSearch = findViewById(R.id.et_search);
         btnSearch = findViewById(R.id.iv_search);
         rvData = findViewById(R.id.rv_data);
         lmData = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvData.setLayoutManager(lmData);
+
+
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoryActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
@@ -73,8 +86,16 @@ public class CategoryActivity extends AppCompatActivity {
         });
         retrieveData();
 
+        tvResto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoryActivity.this, RestaurantActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
+
 
     public void search(String searchname){
         APIRequestData arData = RetroServer.konekRetrofit().create(APIRequestData.class);
@@ -90,7 +111,7 @@ public class CategoryActivity extends AppCompatActivity {
 
                 listRestaurant = response.body().getData();
 
-                adData = new AdapterData(CategoryActivity.this, listRestaurant);
+                adData = new AdapterMain(CategoryActivity.this, listRestaurant);
                 rvData.setAdapter(adData);
                 adData.notifyDataSetChanged();
 
@@ -118,7 +139,7 @@ public class CategoryActivity extends AppCompatActivity {
 
                 listRestaurant = response.body().getData();
 
-                adData = new AdapterData(CategoryActivity.this, listRestaurant);
+                adData = new AdapterMain(CategoryActivity.this, listRestaurant);
                 rvData.setAdapter(adData);
                 adData.notifyDataSetChanged();
             }
@@ -130,4 +151,6 @@ public class CategoryActivity extends AppCompatActivity {
         });
 
     }
+
+
 }

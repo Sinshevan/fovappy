@@ -13,8 +13,11 @@ public interface APIRequestData {
     @GET("searchRestaurant.php")
     Call<ResponseModel> search(@Query("key") String keyword);
 
-    @GET("Makanan.php")
-    Call<ResponseModel> makanan(@Query("key") int keyword);
+    @GET("makanan.php")
+    Call<ResponseModel> makanan();
+
+    @GET("restaruant.php")
+    Call<ResponseModel> restaurant();
 
 
 

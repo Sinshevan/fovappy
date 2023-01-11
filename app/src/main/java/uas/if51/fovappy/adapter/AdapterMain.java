@@ -11,16 +11,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import retrofit2.Callback;
 import uas.if51.fovappy.R;
 import uas.if51.fovappy.models.DataModel;
+import uas.if51.fovappy.models.ResponseModel;
 
 public class AdapterMain extends RecyclerView.Adapter<AdapterMain.HolderData>{
     private Context ctx;
     private List<DataModel> listRestaurant;
 
+
     public AdapterMain(Context ctx, List<DataModel> listRestaurant) {
         this.ctx = ctx;
         this.listRestaurant = listRestaurant;
+
     }
 
     @NonNull
@@ -38,6 +42,8 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.HolderData>{
         holder.tvId.setText(String.valueOf(dm.getId()));
         holder.tvNama.setText(dm.getNama_restaurant());
         holder.tvRating.setText(dm.getRating());
+        holder.tvWaktu.setText(dm.getWaktu());
+        holder.tvAlamat.setText(dm.getAlamat());
 
     }
 
@@ -54,7 +60,13 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.HolderData>{
             tvId = itemView.findViewById(R.id.tv_id);
             tvNama = itemView.findViewById(R.id.tv_namamakanan);
             tvRating = itemView.findViewById(R.id.tv_rating);
+            tvWaktu = itemView.findViewById(R.id.tv_waktu);
+            tvAlamat = itemView.findViewById(R.id.tv_jalan);
 
         }
+
+
     }
+
+
 }

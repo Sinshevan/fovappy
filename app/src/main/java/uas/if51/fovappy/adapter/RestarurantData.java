@@ -14,11 +14,11 @@ import java.util.List;
 import uas.if51.fovappy.R;
 import uas.if51.fovappy.models.DataModel;
 
-public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
+public class RestarurantData extends RecyclerView.Adapter<RestarurantData.HolderData>{
     private Context ctx;
     private List<DataModel> listRestaurant;
 
-    public AdapterData(Context ctx, List<DataModel> listRestaurant) {
+    public RestarurantData(Context ctx, List<DataModel> listRestaurant) {
         this.ctx = ctx;
         this.listRestaurant = listRestaurant;
     }
@@ -38,7 +38,9 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
         holder.tvId.setText(String.valueOf(dm.getId()));
         holder.tvNama.setText(dm.getNama_restaurant());
         holder.tvRating.setText(dm.getRating());
-
+        holder.tvWaktu.setText(dm.getWaktu());
+        holder.tvAlamat.setText(dm.getAlamat());
+        holder.tvAsal.setText(dm.getAsal());
     }
 
     @Override
@@ -52,9 +54,11 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
         public HolderData(@NonNull View itemView) {
             super(itemView);
             tvId = itemView.findViewById(R.id.tv_id);
-            tvNama = itemView.findViewById(R.id.tv_namamakanan);
+            tvNama = itemView.findViewById(R.id.tv_namaresto);
             tvRating = itemView.findViewById(R.id.tv_rating);
-
+            tvWaktu = itemView.findViewById(R.id.tv_waktu);
+            tvAlamat = itemView.findViewById(R.id.tv_jalan);
+            tvAsal = itemView.findViewById(R.id.tv_tempat);
         }
     }
 }
