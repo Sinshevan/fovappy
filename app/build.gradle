@@ -49,8 +49,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-database'
     // Firebase Storage
     implementation 'com.google.firebase:firebase-storage'
-    // Firebase Cloud Messaging
-    implementation 'com.google.firebase:firebase-messaging'
     // FirebaseUI for Firebase Realtime Database
     implementation 'com.firebaseui:firebase-ui-database:8.0.2'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
